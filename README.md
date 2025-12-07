@@ -7,3 +7,7 @@
 
 ### 2. Database Integrity Management
 - Constrains of SQL
+- Data Relationship
+- Alias
+
+### 3. Operators
