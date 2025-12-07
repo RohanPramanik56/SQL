@@ -11,3 +11,5 @@
 - Alias
 
 ### 3. Operators
+- Arithmetic Operators
+- Relational Operators
