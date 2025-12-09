@@ -13,3 +13,8 @@
 ### 3. Operators
 - Arithmetic Operators
 - Relational Operators
+- Symbolic Operator
+- BETWEEN Operator
+- IN Operator
+- IS NULL and IS NOT NULL Operators
+- LIKE and NOT LIKE Operator
