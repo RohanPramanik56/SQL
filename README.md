@@ -18,3 +18,7 @@
 - IN Operator
 - IS NULL and IS NOT NULL Operators
 - LIKE and NOT LIKE Operator
+- DISTINCT and UNIQUE
+- LIMIT and OFFSET
+
+### 4. Functions

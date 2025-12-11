@@ -211,3 +211,40 @@ SELECT * FROM Drives WHERE designation NOT LIKE '%Developer%';
 -- Find all the rows where the drive_date is not in the year 2023.
 SELECT * FROM Drives WHERE drive_date NOT LIKE '%2023%';
 ```
+
+## DISTINCT and UNIQUE
+- The **DISTINCT** keyword is used to return only unique values from a specified column.
+- The **UNIQUE** keyword can also be used to achieve the same result. However, it's important to note that UNIQUE works only in Oracle SQL for retrieval purposes, whereas DISTINCT works in both MySQL and Oracle.
+
+``` SQL
+SHOW DATABASES;
+USE University;
+SHOW TABLES;
+SELECT * FROM Drives;
+
+SELECT DISTINCT designation FROM Drives; -- This will work both in MySQL and ORACLE SQL
+SELECT UNIQUE designation FROM Drives; SELECT UNIQUE designation FROM Drives; -- This will only work in ORACLE SQL / In SQL UNIQUE only use for creating column it will not work while fetching data.
+```
+## LIMIT and OFFSET
+- **LIMIT:** The LIMIT keyword restricts the number of rows returned in the result set. In this case, it limits the output to the first two records.
+- **OFFSET:** The OFFSET keyword skips the first three records, and then LIMIT restricts the output to the next two records.
+
+``` SQL
+SHOW DATABASES;
+USE University;
+SHOW TABLES;
+SELECT * FROM Drives;
+
+
+-- Write a query to display the first two records from the drives table.
+SELECT * FROM Drives LIMIT 2;
+
+-- Displaying Two Records Starting from the Fourth Record
+SELECT * FROM Drives LIMIT 2 OFFSET 3;
+
+-- Displaying Specific Records Based on Conditions
+SELECT * FROM Drives WHERE designation = 'Backend Developer' LIMIT 2 OFFSET 1;
+
+-- Displaying Developer Details
+SELECT * FROM Drives WHERE designation LIKE '%Developer%' LIMIT 2 OFFSET 2;
+```
