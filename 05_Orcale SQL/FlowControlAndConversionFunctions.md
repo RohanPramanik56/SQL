@@ -7,6 +7,10 @@ The NVL function is used to replace NULL values with a specified value. This is 
 -- Display worker names and birth dates, replacing NULL birth dates with 01/01/2023
 SELECT worker_name, NVL(birth_date, TO_DATE('01/01/2023', 'MM/DD/YYYY')) AS birth_date  
 FROM workers_details;
+
+/* Explanation:
+This query selects the worker_name and the birth_date. If the birth_date is NULL, it replaces the NULL value with 01/01/2023 using the NVL function. The TO_DATE function converts the string 01/01/2023 into a date format.
+*/
 ```
 
 
@@ -18,10 +22,19 @@ The NVL2 function checks whether a value is NULL or not, and returns one value i
 SELECT worker_name, NVL2(dependents, 'Present', 'Absent') AS dependents_status  
 FROM workers_details;
 
+/* Explanation:
+This query selects the worker_name and uses the NVL2 function to check the dependents column. If dependents is NULL, it returns 'Absent'; if dependents is not NULL, it returns 'Present'.
+*/
+
+
 -- Display worker names and ages, replacing NULL ages with 'No Age' otherwise display age itself
 
 SELECT worker_name, NVL2(age, age, 'No Age') AS age_status  
 FROM workers_details;
+
+/* Explanation:
+This query selects the worker_name and the age. If the age is NULL, it replaces the NULL value with 'No Age' using the NVL2 function. If age is not NULL, it returns the age itself.
+*/
 ```
 
 # Conversion Function
@@ -33,10 +46,16 @@ The TO_DATE function converts a string to a date. This function is used when you
 -- Convert the string 20-02-2023 to a date
 SELECT TO_DATE('20-02-2023', 'DD-MM-YYYY') AS converted_date 
 FROM dual;
+/*Explanation:
+This query converts the string 20-02-2023 to a date using the format DD-MM-YYYY.
+*/
 
 -- Convert the string 20 Feb 2023 to a date
 SELECT TO_DATE('20 Feb 2023', 'DD MON YYYY') AS converted_date 
 FROM dual;
+/* Explanation:
+This query converts the string 20 Feb 2023 to a date using the format DD MON YYYY.
+*/
 ```
 
 - **TO_CHAR Function**
@@ -46,22 +65,37 @@ The TO_CHAR function converts a date or number to a string with a specified form
 -- Display birth dates in the format DD-MON-YYYY
 SELECT worker_name, TO_CHAR(birth_date, 'DD-MON-YYYY') AS formatted_birth_date  
 FROM workers_details;
+/* Explanation:
+This query selects the worker_name and the birth_date, converting the birth_date to a string in the format DD-MON-YYYY.
+*/
 
 -- Display the birth month and year as Month YYYY
 SELECT worker_name, TO_CHAR(birth_date, 'Month YYYY') AS birth_month_year  
 FROM workers_details;
+/* Explanation:
+This query selects the worker_name and the birth_date, converting the birth_date to a string in the format Month YYYY.
+*/
 
 -- Display the day of the week for each birth date
 SELECT worker_name, TO_CHAR(birth_date, 'Day') AS birth_day  
 FROM workers_details;
+/* Explanation:
+This query selects the worker_name and the birth_date, converting the birth_date to a string representing the day of the week.
+*/
 
 -- Display the birth date in the format YYYYMMDD
 SELECT worker_name, TO_CHAR(birth_date, 'YYYYMMDD') AS birth_date_formatted 
 FROM workers_details;
+/* Explanation:
+This query selects the worker_name and the birth_date, converting the birth_date to a string in the format YYYYMMDD.
+*/
 
 -- Display the century of the birth date as CC
 SELECT worker_name, TO_CHAR(birth_date, 'CC') AS birth_century 
 FROM workers_details;
+/* Explanation:
+This query selects the worker_name and the birth_date, converting the birth_date to a string representing the century.
+*/
 ```
 
 -- **TO_NUMBER Function**
@@ -71,10 +105,16 @@ The TO_NUMBER function converts a string to a number. This function is used when
 -- Convert age to number and add 3 years to workers' ages where worker_id is greater than 3
 SELECT worker_name, TO_NUMBER(age) + 3 AS age_3_years_later  
 FROM workers_details WHERE worker_id > 3;
+/* Explanation:
+This query selects the worker_name and converts the age (which is a string) to a number using the TO_NUMBER function. It then adds 3 to the age and renames this column as age_3_years_later. The query filters the results to include only workers with worker_id greater than 3.
+*/
 
 -- Display worker names and hire dates, adding 10 days to the hire date and displaying the date only
 SELECT worker_name, TO_CHAR(hire_date_time + INTERVAL '10' DAY, 'DD') AS hire_date_plus_10  
 FROM workers_details;
+/* Explanation:
+This query selects the worker_name and adds 10 days to the hire_date_time, then converts the result to a string and displays only the date part using the TO_CHAR function.
+*/
 ```
 
 
