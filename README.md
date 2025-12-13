@@ -22,3 +22,5 @@
 - LIMIT and OFFSET
 
 ### 4. Functions
+- Single Row Functions
+- Multi Row Functions / Aggregate Function / Group Function
