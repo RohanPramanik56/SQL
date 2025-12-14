@@ -29,21 +29,21 @@
 - Single Row Functions
 - Multi Row Functions / Aggregate Function / Group Function
 
-### Structuring data with SQL
+### 6. Structuring data with SQL
 - Group by Clause
 - Advanced SQL Queries using all select clause
 - Sub Queries
 - SQL Joins
 - Common table expressions (CTE) in SQL
 
-### SQL Command
+### 7. SQL Command
 - Commanding SQL
 - DDL Commands
 - DML Commands
 - TCL Commands
 - DCL Commands
 
-### Database Objects & Advanced SQL Topics
+### 8. Database Objects & Advanced SQL Topics
 - DB Objects introduction & Views
 - Simplyfying DB management with synonyms
 - Sequences in SQL
@@ -52,7 +52,7 @@
 - Triggers in SQL
 - Creating Database using database clients
 
-### Database design and Optimization
+### 9. Database design and Optimization
 - Database & Anomalies in DBMS
 - Mastering ER Diagrams
 - Normalization
