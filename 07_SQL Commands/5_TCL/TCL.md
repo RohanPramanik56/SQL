@@ -49,3 +49,5 @@ ROLLBACK TO first_entry;
 -- Final commit 
 COMMIT;
 ```
+
+#### With out savepoint, rollback will execute upto last commit. 

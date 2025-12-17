@@ -1,0 +1,4 @@
+USE Others;
+SHOW TABLES;
+
+SELECT * FROM Student;
