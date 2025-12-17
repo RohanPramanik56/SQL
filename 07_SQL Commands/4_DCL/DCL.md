@@ -14,7 +14,7 @@ CREATE USER 'adam_new' IDENTIFIED BY 'password';
 ```
 #### 2. Grant All Privileges to the User:
 ``` SQL
-GRANT ALL PRIVILEGES ON *.* TO 'adam_new';
+GRANT ALL PRIVILEGES ON *.* TO 'adam_new'; -- (*.*) means all structure and all table
 ```
 #### 3. Revoke Privileges:
 ``` SQL
