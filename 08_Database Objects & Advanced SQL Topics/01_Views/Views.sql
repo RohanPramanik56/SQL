@@ -30,5 +30,12 @@ SELECT users.user_id,
 bank.balance FROM users INNER JOIN bank 
 ON users.account_number = bank.account_number;
 
+CREATE VIEW high_balance_users
+AS
+SELECT user_id, balance 
+FROM user_id_balance    
+WHERE balance > 100000;
+
 -- Query the view
 SELECT user_id, balance FROM user_id_balance WHERE balance > 80000;
+SELECT * FROM high_balance_users;   
