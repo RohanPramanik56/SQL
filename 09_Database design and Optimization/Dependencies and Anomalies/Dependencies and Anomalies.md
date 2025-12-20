@@ -10,6 +10,7 @@ Assume we have a table named students with the following columns:
 |------------|--------------|
 | 101        | Rahul        |
 | 102        | Priya        |
+
 Here, Student Name is functionally dependent on Student ID because knowing the Student ID allows us to determine the Student Name.
 
 #### Definition:
@@ -25,6 +26,7 @@ Consider a table named employee_projects:
 | 101         | 4004       | Ayush         | Java         |
 | 102         | 4004       | Shiva         | Java         |
 | 101         | 4005       | Ayush         | Python       |
+
 Here, Employee Name is dependent on Employee ID, and Project Name is dependent on Project ID. However, Employee ID and Project ID together form a composite primary key. This creates a partial dependency where an attribute is dependent on only a part of the composite key.
 
 #### Definition:
@@ -61,6 +63,7 @@ Consider a table named student_courses:
 | 103        | Priya        | 1         | Java        |
 | 104        | Ankit        | 2         | SQL         |
 | 105        | Ayesha       | 3         | Python      |
+
 If multiple students are taking the same course, the course information is repeated, leading to redundant data.
 
 #### Example of Incomplete Information:
